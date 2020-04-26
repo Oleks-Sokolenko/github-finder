@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import UserItem from "./UserItem";
 import Spinner from "../layout/Spinner";
-import {IGithubContext, withAppContext} from '../../context/github/githubContext';
+import {IGithubContext, withGithubContext} from '../../context/github/githubContext';
 
 interface IProps {
     githubContext: IGithubContext
@@ -29,4 +29,4 @@ const userStyle = {
     gridGap: '1ram'
 }
 
-export default withAppContext(Users);
+export default withGithubContext(Users);

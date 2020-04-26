@@ -1,5 +1,5 @@
 import React, {ChangeEvent, FormEvent, useState} from 'react';
-import {IGithubContext, withAppContext} from "../../context/github/githubContext";
+import {IGithubContext, withGithubContext} from "../../context/github/githubContext";
 import {IAlertContext, withAlertContext} from "../../context/alert/alertContext";
 
 interface IProps {
@@ -38,4 +38,4 @@ const Search : React.FC<IProps> = ({githubContext, alertContext}) => {
     );
 }
 
-export default withAppContext(withAlertContext(Search));
+export default withGithubContext(withAlertContext(Search));

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import RepoItem from './RepoItem';
-import {IGithubContext, withAppContext} from "../../context/github/githubContext";
+import {IGithubContext, withGithubContext} from "../../context/github/githubContext";
 
 interface IProps {
     githubContext: IGithubContext
@@ -16,4 +16,4 @@ const Repos: React.FC<IProps> = (props) => {
     );
 }
 
-export default withAppContext(Repos);
+export default withGithubContext(Repos);

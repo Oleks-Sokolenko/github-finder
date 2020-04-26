@@ -23,7 +23,7 @@ export const GithubContextProvider = ctxt.Provider;
 
 export const GithubContextConsumer = ctxt.Consumer;
 
-export const withAppContext = <P extends IContextProps>(Component: React.ComponentType<P>):
+export const withGithubContext = <P extends IContextProps>(Component: React.ComponentType<P>):
     React.FC<Omit<P, keyof IContextProps>> => (props) => (
         <GithubContextConsumer>
             {value => <Component {...props as P} githubContext={value}/>}

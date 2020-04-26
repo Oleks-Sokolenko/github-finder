@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 import Spinner from "../layout/Spinner";
 import Repos from "../repos/Repos";
-import {IGithubContext, withAppContext} from "../../context/github/githubContext";
+import {IGithubContext, withGithubContext} from "../../context/github/githubContext";
 
 interface IProps extends RouteComponentProps<{login: string}>{
     githubContext: IGithubContext
@@ -74,4 +74,4 @@ const User : React.FC<IProps> = (props) => {
     }
 }
 
-export default withAppContext(User);
+export default withGithubContext(User);
